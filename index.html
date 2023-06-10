@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="iconos-fontawsome/css/all.min.css">
+    <title>Proyecto Encriptador</title>
+</head>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        autosize(document.querySelectorAll('#Adapt')); 
+        }, false);
+
+        document.addEventListener('DOMContentLoaded', function() {
+        autosize(document.querySelectorAll('#Out-Text')); 
+        }, false);
+
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <img class="Logo-A" src="img/Vector.svg" alt="Logo Alura">
+    </header>
+
+    <main class="Content-main">
+
+        <section class="Contenido">
+        <!-- <input type="text" name="Ingresar Texto" id="Text-edit" value="Ingrese el texto aquí" class="Mensaje">   -->
+
+            <textarea class="text-in" name="Mensaje" id="Adapt" cols="27" rows="1" placeholder="Ingrese el texto aquí"></textarea>
+
+               <div class="Resultado">
+                    <!-- <input type="text" name="Output" id="Out-Text">  -->
+                    <textarea class="text-out" name="" id="Out-Text" cols="27" rows="1"></textarea>
+                    <div class="hidden">
+                        <img src="img/Muñeco.png" alt="Muñeco" id="Muñeco" class="Muñeco">
+                        <h2 class="No-Text">Aún no has ingresado ningún texto</h2>
+                    </div>
+                    <div id="division-cop">
+                        <input type="button" value="Copiar" class="boton" id="copiar" for="Out-Text" onclick="copyElement()">
+                    </div>
+                </div>
+
+        
+
+            <section class="Botones">
+                <label for="Encriptar" id="Info"><i class="fa-solid fa-circle-exclamation"></i> Ingresar minusculas y sin acentos</label>
+                <input type="button" value="Encriptar" class="boton" id="Encriptar" onclick="buttonEncriptar()">
+                <input type="button" value="Desencriptar" class="boton" id="Desencriptar" onclick="buttonDesencriptar()">
+            </section>
+
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/4.0.2/autosize.min.js"></script>
+    <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.5.3/dist/clipboard.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
